@@ -45,11 +45,11 @@ public class BankAccount {
 
         String accountNo="";
 
-        while(sum > 0){
+        while(sum > 9){
             accountNo+='9';
             sum-=9;
         }
-        accountNo+=sum;
+        accountNo+=sum+"";
 
         while(accountNo.length() < digits){
             accountNo+='0';
