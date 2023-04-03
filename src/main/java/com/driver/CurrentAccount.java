@@ -35,6 +35,7 @@ public class CurrentAccount extends BankAccount{
     }
     public boolean isVlid(String tradeLicenseId){
 
+        System.out.println("isValid function is caled");
         for(int i = 0; i < tradeLicenseId.length() - 1; i++){
             if(tradeLicenseId.charAt(i) == tradeLicenseId.charAt(i+1))
                 return false;
@@ -47,6 +48,8 @@ public class CurrentAccount extends BankAccount{
     }
 
     public String arrangeId(String S){
+
+        System.out.println("arrangeId function is called");
         int N=S.length();
 
         int freq[]=new int[26];
@@ -60,9 +63,9 @@ public class CurrentAccount extends BankAccount{
 
 
 
-        if(N % 2 == 0 && max_count > (N/2)+1){
+        if(N % 2 == 0 && max_count >= (N/2)+1){
             return  "";
-        }else if(max_count > (N/2)+2){
+        }else if(max_count >= (N/2)+2){
             return "";
         }
 
@@ -97,6 +100,8 @@ public class CurrentAccount extends BankAccount{
         for(int i=0;i<N;i++){
             rearranged.append(ans[i]);
         }
+
+        System.out.println(rearranged.toString());
         return rearranged.toString();
 
 
